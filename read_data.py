@@ -92,7 +92,7 @@ def main():
 
         # generate amplitude from fft complex data
         for j in range(0,len(fft_complex)) :
-            fft_amp.append(float(("{0:.4f}").format(abs(fft_complex[j]))))
+            fft_amp.append(float(("{0:.4f}").format(abs(fft_complex[j])/(fft_sam_space/2))))
 
         # save time data from master file to excel file
         sheet1.write(0,0,'Time')
