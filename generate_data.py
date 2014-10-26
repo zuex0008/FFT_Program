@@ -16,14 +16,13 @@ def main():
 
     book = xlwt.Workbook(encoding="utf-8")
     sheet1 = book.add_sheet("Sheet 1")
+    pi_val = math.pi
 
-
-    for x in range(0,3000) :
-        t = t + 1.5e-05
-        val1 = 1*math.sin(2*math.pi*t*10) + 2*math.sin(2*math.pi*t*20)
+    for x in range(0,2055) :
+        val1 = 10*math.sin(2*pi_val*t*20) #+ 0* math.sin(2*pi_val*t*100)
         sheet1.write(x,0,t)
-        sheet1.write(x,1, val1 )
-
+        sheet1.write(x,1, float("{0:.4f}".format(val1)) )
+        t = t + 0.00003
 
     book.save("freq_Sample.xls")
 
