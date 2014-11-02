@@ -18,8 +18,8 @@ def main():
     sheet1 = book.add_sheet("Sheet 1")
     pi_val = math.pi
 
-    for x in range(0,2050) :
-        val1 = 20*math.sin(2*pi_val*t*50) #+ 0* math.sin(2*pi_val*t*100)
+    for x in range(0,30000) :
+        val1 = 20*math.sin(2*pi_val*t*50) + 10* math.sin(2*pi_val*t*100)
         sheet1.write(x,0,t)
         sheet1.write(x,1, float("{0:.4f}".format(val1)) )
         t = t + 0.00003

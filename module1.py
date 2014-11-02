@@ -10,11 +10,7 @@
 #-------------------------------------------------------------------------------
 
 def main():
-    import math
-    k = []
-    for j in range(0,128):
-        k.append(10*math.sin(2*math.pi*10*j))
-    print k
+    from Tkinter import Tk
 
 
 if __name__ == '__main__':
